@@ -17,6 +17,7 @@ import com.bcle.DTO.Category;
 import com.bcle.DTO.Club;
 import com.bcle.DTO.ClubSearch;
 import com.bcle.DTO.Recruit;
+import com.bcle.controller.ClubPaging;
 import com.bcle.controller.Paging;
 
 @Controller
@@ -51,7 +52,7 @@ public class ClubSearchController
        * ------------------------------------------------- 세션 처리
        */
       // 페이징
-      Paging paging = new Paging();
+      ClubPaging paging = new ClubPaging();
       
       // 넘어온(요청된) 페이지 번호 확인
       //String pageNum = request.getParameter("pageNum");
@@ -124,7 +125,7 @@ public class ClubSearchController
        * ------------------------------------------------- 세션 처리
        */
       // 페이징
-      Paging paging = new Paging();
+      ClubPaging paging = new ClubPaging();
       
       // 현재 표시되어야 하는 페이지
       int currentPage = 1;
@@ -200,7 +201,7 @@ public class ClubSearchController
        * ------------------------------------------------- 세션 처리
        */
       // 페이징
-      Paging paging = new Paging();
+      ClubPaging paging = new ClubPaging();
       
       int currentPage = 1;
       

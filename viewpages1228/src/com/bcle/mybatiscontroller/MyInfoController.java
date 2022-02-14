@@ -341,11 +341,9 @@ public class MyInfoController
 		try
 		{
 			Gson gson = new Gson(); 
-			result = gson.toJson(dao.getClubPreOpen(id));
 			
 			if(status.equals("0")) 	// 활동중 동아리
 			{
-				// value가 0이면? 으악 이게 뭐야!
 				if(cid.equals("total"))
 					result = gson.toJson(dao.getMyPageTotalCal(year, month, id));
 				else
@@ -353,7 +351,11 @@ public class MyInfoController
 			}
 			else					// 활동 종료 동아리
 			{
-				
+				  if(cid.equals("total")) 
+					  result = gson.toJson(dao.getMyPageTotalCalClosed(year, month, id)); 
+				  else 
+					  result = gson.toJson(dao.getMyPageCalClosed(cid, year, month, id));
+				 
 			}
 				
 			

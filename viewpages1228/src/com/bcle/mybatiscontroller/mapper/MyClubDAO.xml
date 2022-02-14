@@ -89,7 +89,6 @@
                                                             AND CLUBMEM_ID NOT IN (SELECT CLUBMEM_ID FROM BAN_MEM_LIST)
                                                             AND CLUBMEM_ID NOT IN (SELECT CLUBMEM_ID FROM DROP_CLUB))) 
 		AND MIN &lt; REQCNT)
-		OR (CID = #{cid} AND SUBSTR(BEETIME, 1, 4) LIKE #{year} AND SUBSTR(BEETIME, 6, 2) LIKE #{month} AND TO_DATE(SUBSTR(BEETIME, 1, 10), 'RR/MM/DD') > TO_DATE(SYSDATE, 'RR/MM/DD'))
 	</select>
 	
 	<select id="getMyPageTotalCalClosed" resultType="com.bcle.DTO.Bee">
@@ -106,6 +105,5 @@
                                                             AND CLUBMEM_ID NOT IN (SELECT CLUBMEM_ID FROM BAN_MEM_LIST)
                                                             AND CLUBMEM_ID NOT IN (SELECT CLUBMEM_ID FROM DROP_CLUB)))
 		AND MIN &lt; REQCNT)
-		OR (SUBSTR(BEETIME, 1, 4) LIKE #{year} AND SUBSTR(BEETIME, 6, 2) = #{month} AND TO_DATE(SUBSTR(BEETIME, 1, 10), 'RR/MM/DD') > TO_DATE(SYSDATE, 'RR/MM/DD'))
 	</select>
 </mapper>

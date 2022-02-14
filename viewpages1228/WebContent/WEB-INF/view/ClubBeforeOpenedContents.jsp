@@ -219,11 +219,7 @@ $(document).ready(function()
 
       });
       
-      $(".updateBtn").click(function()
-      {
-         $('#managerModal').modal('show');
-      });
-      
+    
       
 
 });
@@ -386,7 +382,7 @@ ClubBeforeOpenedContents.jsp
    <div class="wrap">
       <!-- 네브 영역 -->
       <div>
-         <c:import url="/nav.action"></c:import> >
+         <c:import url="/nav.action"></c:import> 
       </div>
       
       
@@ -612,8 +608,8 @@ ClubBeforeOpenedContents.jsp
                   <div class ="button_set">
 
                         <button type="button" class="btn btn-secondary" id="closeBtn" onclick="location.href='clubprelistform.action'">닫기</button>
-                        <button type="button" class="btn btn-warning" id="updateBtn" onclick="checkId()" value="${clubDetail.cid }" style="display: block">수정</button>
-                        <button type="button" class="btn btn-warning" id="deleteBtn" onclick="checkId2()" value="${clubDetail.cid }">삭제</button>
+                        <button type="button" class="btn btn-warning" id="updateBtn"  value="${clubDetail.cid }" style="display: block">수정</button>
+                        <button type="button" class="btn btn-warning" id="deleteBtn"  value="${clubDetail.cid }">삭제</button>
                      </div>
             
             <!-- 

@@ -56,7 +56,7 @@ String cp = request.getContextPath();
 	<div id="wrap">
 		<div>
 			<!-- 메뉴 영역 -->
-			<c:import url="/nav.jsp"></c:import> 
+			<c:import url="nav.jsp"></c:import> 
 
 			<!-- 사이드바 영역  -->
 

@@ -26,12 +26,12 @@ public interface IMyClubDAO
 	// 개설 예정 동아리
 	public ArrayList<Club> getClubPreOpen(String id) throws SQLException;
 	
-	// 활동중 동아리
+	// 활동중 동아리 캘린더
 	public ArrayList<Bee> getMyPageCal(@Param("cid") String cid,@Param("year") String year,@Param("month") String month,@Param("id") String id) throws SQLException;
 	
 	public ArrayList<Bee> getMyPageTotalCal(@Param("year") String year,@Param("month") String month,@Param("id") String id) throws SQLException;
 	
-	// 활동 종료 동아리
+	// 활동 종료 동아리 캘린더
 	public ArrayList<Bee> getMyPageCalClosed(@Param("cid") String cid,@Param("year") String year,@Param("month") String month,@Param("id") String id) throws SQLException;
 	
 	public ArrayList<Bee> getMyPageTotalCalClosed(@Param("year") String year,@Param("month") String month,@Param("id") String id) throws SQLException;

@@ -281,6 +281,7 @@
 		            	//$("#showClub").html("");
 		            	//str += "<div class='row'>";
 		            	
+		            	//alert(result.length);
 		            	
 		            	 // 숫자 출력
 				         for (var i = 1; i <= days[month-1]; i++)

@@ -185,7 +185,11 @@ public class ClubDAO implements IClubDAO
 		
 		Connection conn = dataSource.getConnection();
 		
-		String sql = "SELECT CLUBMEM_ID, NICKNAME, URL FROM CLUBMEM_CID_VIEW WHERE CID=? AND CLUBMEM_ID IS NOT NULL";
+		String sql = "SELECT CLUBMEM_ID, NICKNAME, URL"
+				+ " FROM CLUBMEM_CID_VIEW"
+				+ " WHERE CID=? AND CLUBMEM_ID IS NOT NULL"
+				+ " AND CLUBMEM_ID NOT IN (SELECT CLUBMEM_ID FROM BAN_MEM_LIST)"
+				+ " AND CLUBMEM_ID NOT IN (SELECT CLUBMEM_ID FROM DROP_CLUB)";
 		
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, cid);		

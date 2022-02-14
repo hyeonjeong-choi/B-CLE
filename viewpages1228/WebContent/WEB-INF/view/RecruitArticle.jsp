@@ -472,12 +472,12 @@ ClubBeforeOpenedContents.jsp
                     </c:if>
                      <div class="container2">
                             <div class="row">
-                           <c:forEach var="list" items="${volunteerList }" varStatus="status">
-                              <c:if test="${status.index%3==0 }">
-                                 </div><div class="row">
-                               </c:if>
-                             <div class="col-lg-4">
-                                 <c:choose>
+                           	<c:forEach var="list" items="${volunteerList }" varStatus="status">
+                              	<c:if test="${status.index%3==0 }">
+                                 	</div><div class="row">
+                               	</c:if>
+                             	<div class="col-lg-4">
+                                 	<c:choose>
                                        <c:when test="${positionCheck ne 1}"> <!-- 동아리 원이 아니면(운영진이면) 프로필 이동 가능 (a태그) -->
                                           <a href="#" id="profile" data-bs-toggle="modal" data-bs-target="#profileModal"
                                           onclick="showProfile('${list.id}')" >
@@ -496,10 +496,10 @@ ClubBeforeOpenedContents.jsp
                                           <br> ${list.nickname } 
                                        </c:otherwise>
                                     </c:choose>                  
-                           </div>
+                           		</div>
                            
                            
-                       </c:forEach>
+                       		</c:forEach>
                      </div>
                      <br><br>
                        <c:if test="${exeVoteCheck eq 1}">
