@@ -456,12 +456,6 @@ button.btn1 {
 		if (totalByte > maxByte)
 		{
 			alert('최대 1998Byte까지만 입력가능합니다.');
-			/* document.getElementById("nowByte").innerText = totalByte;
-			document.getElementById("nowByte").style.color = "red";
-			}else{
-			document.getElementById("nowByte").innerText = totalByte;
-			document.getElementById("nowByte").style.color = "green";
-			} */
 		}
 	}
 	
@@ -896,7 +890,6 @@ button.btn1 {
 
 			</c:otherwise>
 		</c:choose>
-		<!-- <textarea class="form-control col-sm-5" rows="5"></textarea> -->
 
 	</div>
 
