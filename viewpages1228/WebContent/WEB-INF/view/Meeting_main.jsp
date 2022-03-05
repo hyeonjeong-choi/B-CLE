@@ -470,35 +470,6 @@ button.btn1 {
 </script>
 <body>
 
-<!--  
-모임 상세 정보 페이지
-1. 참석자가 있는 경우 참석자 목록 출력(○)
-2. 모임 개최자는 디폴트로 참석자 목록에 넣어야 할까? 그래야 할 것 같다...! → 프로시저 작성 (○)
-3. 지난 날짜인 것 참가신청/수정/삭제 버튼 노출시키지 않기(○)
-4. 삭제 트리거 이용해서 참가자, 불참 다 지우기(○)
-5. 참가신청 중복해서 신청할 수 없게 - 신청자랑 로그인한 사람 비교(○)
-6. 로그인한 사람이랑 신청자 비교해서 신청자면 참여 취소할 수 있게(○)
-7. 모임 제한인원 못 넘기게 참가신청 제한! - 버튼 숨김(확인 필요) 몇명인지 알아오기
-8. 지난 날짜면 신청, 취소버튼 안 보이게 처리(○)
-회원 탈퇴, 강퇴 당했을 시에 모임 참여 버튼 눌러놨으면 프로시저로 모임 데이터를 지우거나
-그냥 목록에서 안 보이게만 하거나 
-
-9. 작성자일 경우 사진 등록할 수 있게 하기(○)
-10. 정모일 경우에만 사진 등록 가능함....(○)
-사진 5개까지(○)
-삭제
-
-10. 정모후기 - 정모일 이후, 신청자면 후기 등록 부분 노출, 아니면 후기 보기만 가능 (○)
-11. 로그인한 사람 닉네임 가져오기... "ㅇㅇㅇ"님 후기를 남겨주세요!(○)
-12. 정모후기 입력 기한 지정해야 할까?
-13. 정모후기 textarea 글자수 제한(○)
-
-정모후기 신고
-
-[개인평가]
-참여자들끼리만 버튼 보이게 하기
-평가한 사람은 평가완료 버튼 노출하고, 어떤 항목 골랐는지 보이게?? 아님 그냥 완료했다고만?
--->
 	<section class="main">
 		<h2></h2>
 		<div class="upper">
@@ -526,19 +497,6 @@ button.btn1 {
 				인원(최소인원 - 최대인원) : ${bee.min } - ${bee.max }<br>
 
 			</div>
-
-
-			<!-- <div class="right">
-				<section class="weather">
-					날씨 아이콘
-					<div class="weather__box1"></div>
-					기온
-					<div class="weather__box2"></div>
-
-				</section>
-				<section class="map">지도연동</section>
-			</div> -->
-
 		</div>
 
 		<input type="hidden" id="beeTime" name="beeTime"
@@ -589,8 +547,7 @@ button.btn1 {
 				</c:otherwise>
 			</c:choose>
 		</div>
-		<%-- test 작성자 ${(bee).clubmemId} 로그인한 사람 ${s_clubmemId } 신청자 ${reqMem }
-		모임신청코드 ${reqId } --%> <input type="hidden" id="cnt" value="${count }">
+		<input type="hidden" id="cnt" value="${count }">
 		<input type="hidden" id="max" value="${bee.max }">
 
 	</form>
@@ -611,9 +568,8 @@ button.btn1 {
 						<img class="profile" src="images/profile.png">
 					</div>
 					<p style="text-align: center;">${rb.nickname }
-						<%-- 신청코드 ${rb.reqId } --%>
-						<!-- 평가대상 모임신청코드${rb.reqId }랑 개인평가테이블에 있는 모임신청코드랑 비교 -->
-						<!-- 같으면 스킵 -->
+					
+						<!-- 평가대상 모임신청코드${rb.reqId }랑 개인평가테이블에 있는 모임신청코드랑 비교 같으면 skip-->
 						<c:choose>
 							<c:when test="${checkeval eq 1 }">
 							
@@ -764,7 +720,6 @@ button.btn1 {
 			</c:forEach>
 		</div>
 	
-<!-- 원래 폼 닫는 태그 여기 있었음 -->
 	<br>
 	<br>
 	<br>
@@ -822,7 +777,6 @@ button.btn1 {
 	<!-- 신청자랑 로그인한 사람이랑 같고 
 		 로그인한 사람이랑 후기 쓴 사람이랑 같으면 후기를 쓰지 않았으면 입력 폼 노출	
 	-->
-
 	<c:forEach var="beeEval" items="${beeEvalList }">
 		<c:choose>
 			<c:when test="${s_clubmemId eq beeEval.clubmemId }">
@@ -880,8 +834,7 @@ button.btn1 {
 						</div>
 					</form>
 				</c:if>
-				<%-- <button type="button" class="btn btn-warning" id="submitButton"
-					value="${s_clubmemId}&beeId=${(bee).beeId }&cid=${cid}">참여하기</button> --%>
+				
 				<br>
 				<br>
 			</c:when>

@@ -339,8 +339,6 @@
 				            	trNode.appendChild(tdNode);
 				            }
 				            
-				            
-				            //trNode.appendChild(createTdNode(i));
 				            tableNode.appendChild(trNode);
 				            
 				         }

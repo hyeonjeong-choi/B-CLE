@@ -265,18 +265,6 @@ $(document).ready(function()   // 페이지가 로드됐을 때 제이쿼리 실
                return false;            //-- submit 액션 처리 중단
             } 
             
-            
-            
-             /*    
-               // 테스트 
-               //alert($("#minBasicPay").val());         //--(X)
-               //alert($("#minBasicPay").text());         //--(○)
-               
-               // 최소 기본급에 대한 유효성 검사
-               */
-             
-               // 폼 submit 액션 처리 수행
-               //$("#beeForm").submit();
            
               });
          
@@ -316,24 +304,6 @@ $(document).ready(function()   // 페이지가 로드됐을 때 제이쿼리 실
             <textarea cols="50" rows="10" id="content" name="content"  required="required">${bee.content }</textarea>
          </div>
    
-             <%-- <div class="photo">
-               <div id="bbs">
-                  <form action="">
-                     <div id='image_preview'>
-                        <h3>사진 올리기</h3>
-                        <input type='file' id='btnAtt' multiple='multiple' />
-                        <div id='att_zone'
-                           data-placeholder='파일을 첨부 하려면 파일 선택 버튼을 클릭하거나 파일을 드래그앤드롭 하세요.'></div>
-                     </div>
-                     <div id="bbsCreated_footer">
-                        <input type="button" value="등록하기" class="btn2" /> <input
-                           type="button" value="취소하기" class="btn2"
-                           onclick="javascript:location.href='<%=cp%>/beePicList.jsp'" />
-                     </div>
-                  </form>
-               </div> 
-   
-            </div> --%>
          </div>
          
          
@@ -343,11 +313,7 @@ $(document).ready(function()   // 페이지가 로드됐을 때 제이쿼리 실
                <p>※회원들이 정확히 알고 참여할 수 있도록 구체적인 내용을 기재해주세요.</p>
                <br></br> 참가비 <input type="number" min="0" id="fee" name="fee" value="${bee.fee }" required="required"> 
                <br> 모임일 <input type="date" id="beeTime1" name="beeTime1"  required="required" value="${fn:substring(bee.beeTime,0,10) }"> 
-               <%-- <br>
-               ${fn:substring(bee.beeTime,0,10) }<br>
-               ${fn:length(bee.beeTime) }<br>
-               ${fn:substring(bee.beeTime,11,16) }<br>
-               ${bee.beeTime} --%>
+
                <br> 모임시간<input type="time" id="beeTime2" name="beeTime2" required="required" value="${fn:substring(bee.beeTime,11,16) }"><br>
                <%-- <br> 모임시간<input type="time" id="beeTime2" name="beeTime2" value="${fn:substring(bee.beeTime,12,5) }"><br> --%>
                
@@ -356,20 +322,6 @@ $(document).ready(function()   // 페이지가 로드됐을 때 제이쿼리 실
       
             </div>
       
-            <!-- <div class="right">
-               <section class="weather">
-                  <label for="weather"></label>
-                  <div class="weather__box1">
-                     <img class="weather__icon">
-                     <div class="weather__description"></div>
-                  </div>
-                  <div class="weather__box2">
-                     <div class="weather__temperature"></div>
-                     <div class="weather__location"></div>
-                  </div>
-      
-               </section>
-               <section class="map">지도연동</section>
                
             </div> -->
          </div>

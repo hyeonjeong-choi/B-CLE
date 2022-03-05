@@ -102,20 +102,6 @@ String cp = request.getContextPath();
          <button onclick="location.href='joinform.action'">참여하기</button>
       </section>
       </c:if>
-      
-      <!--section.search-->
-      <!--  <section class="search">
-      
-                  <h2 class="en">Find what you want <span>.</span>
-            </h2>
-         <form action="">
-         <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="검색할 동아리명을 입력하세요" aria-label="Recipient's username" aria-describedby="basic-addon2">
-              <span class="input-group-text" id="basic-addon2"><button>검색하기</button></span>
-         </div>
-         </form>
-         
-      </section> -->
          
       <br><br>
       

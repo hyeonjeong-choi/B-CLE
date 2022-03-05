@@ -16,17 +16,6 @@ String cp = request.getContextPath();
 <script type="text/javascript" src="<%=cp%>/js/ajax.js"></script>
 <!-- <link rel="stylesheet" href="css/main.css"> -->
 <script type="text/javascript">
-	/* $(document).ready(function() // 페이지가 로드됐을 때 제이쿼리 실행?
-	{
-
-		//$('#calendar').load('/beecalendarlist.action');
-		if($("#b").val() == 'b')
-		{
-			$("#tab03").attr('checked', 'checked');
-		}
-
-	});
-	 */
 	
 	$(document).ready(function() 
 	{
@@ -332,7 +321,6 @@ label {
 		</c:if>
 		
 		<!-- 사이트 회원이고 동아리 회원이 아닌 경우 -->
-		<!-- 지역 제한, 나이 제한.... 통과하면 버튼 노출-->
 		<c:if test="${!empty id and checkClubMem eq 0 and checkClubJoin eq 0}">
 			<input type="button" class="btn btn-outline-success" value="동아리 가입하기"
 			onclick="location.href='clubjoininsert.action?cid=${cid}'" style="float: right; margin-right: 30vh;">
@@ -356,13 +344,10 @@ label {
 		</div>
 		
 		<div class="conbox con2">
-			<%-- <jsp:include page="/beecalendarlist.action?cid=${clubInfo.cid }"></jsp:include> --%>
-			
 			<c:import url="/beecalendarlist.action?cid=${clubInfo.cid }"></c:import>
 		</div>
 		
 		<div class="conbox con3">
-			<%-- <c:import url=""></c:import> --%>
 		</div>
 		
 		<div class="conbox con4">
@@ -407,15 +392,6 @@ label {
 		        			<th>승인</th>
 		        			<th>반려</th>
 		        		</tr>
-		        		<%-- <c:forEach var="list" items="${clubJoinList}">
-		        			<tr>
-		        				<td>${list.nickname }</td>
-		        				<td><button type="button" class="btn btn-outline-success btn-sm" value="${list.joinId }"
-										id="button">승인</button></td>
-		        				<td><input type="button" class="btn btn-outline-danger btn-sm" value="반려"
-										onclick="location.href='joinclubreturninsert.action?cid=${cid}&listId=${list.joinId }'"></td>
-		        			</tr>
-		        		</c:forEach> --%>
 		        	</table>
 		        </div>
 		        
@@ -432,9 +408,6 @@ label {
 
 </body>
 
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-	crossorigin="anonymous"></script> -->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

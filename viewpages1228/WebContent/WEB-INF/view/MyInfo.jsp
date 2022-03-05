@@ -238,13 +238,6 @@ span
 						<span class="badge bg-secondary">${n6 }</span><br>
 					</div>
 				</div>
-				<%-- <input class="form-control" style="width: 30%;" type="text" value="👍매너가 좋아요 ">
-				👍매너가 좋아요 <span class="badge bg-secondary">4</span> 
-				<input type="text" value="${info.categoryName}"> 
-				<input type="text" value="${info.categoryName2}"> 
-				<input type="text" value="${info.categoryName3}">
-				<input type="text" value="${info.categoryName4}"> 
-				<input type="text" value="${info.categoryName5}"> --%>
 			</div>
 			<br><br><br>
 		</div>

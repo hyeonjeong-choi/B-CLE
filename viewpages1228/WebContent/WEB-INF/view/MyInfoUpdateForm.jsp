@@ -18,18 +18,6 @@
 
 
 <style type="text/css">
-/* .outer {
-  display: flex;
-  align-items: center; 
-  flex-direction: row; 
-  justify-content: center; 
-}
-.inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-} */
 
 .outer
 {

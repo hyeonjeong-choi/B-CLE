@@ -17,7 +17,6 @@
 	for(Bee bee : lists)
 	{
 		StringBuffer sb = new StringBuffer();
-		//System.out.println(bee.getBeeId());
 		sb.append("{\"beeId\":\"" + bee.getBeeId() + "\"");
 		sb.append(",\"typeName\":\"" + bee.getTypeName() + "\"");
 		sb.append(",\"title\":\"" + bee.getTitle() + "\"");

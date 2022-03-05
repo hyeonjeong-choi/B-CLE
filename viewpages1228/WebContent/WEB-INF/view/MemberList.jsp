@@ -78,24 +78,12 @@
 	}	
 	
 </script>
-<style type="text/css">
-/* 	.left
-	{
-		float: left;
-	}
-	.right
-	{
-		float: right;
-	}
- */
-</style>
 </head>
 <body>
 
 <!-- 
  MemberList.jsp
 -  관리자페이지>회원관리>전체회원
-
  -->
 
 	<div>
@@ -134,14 +122,6 @@
  		 	
  		</div>
 		
-		
-		<!-- 풋터영역 -->
-	     <%-- <div>
-	      	<c:import url="footer2.jsp"></c:import>
-	     </div> --%>
-		
-
-
 	</div>
 
 

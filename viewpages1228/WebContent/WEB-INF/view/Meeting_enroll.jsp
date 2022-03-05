@@ -291,14 +291,6 @@ background-color : lightgray;
 
 <!--  
 [모임 등록 페이지]
-0. 동아리원만 개설할 수 있음(이 페이지 넘어오기 전에 캘린더에서 처리)(○)
-1. 모든 입력 칸 빈 칸 없이(○)
-2. 지난 날짜는 선택하지 못하게(○)
-3. 정모날짜에 반짝모임 신청하지 못하도록 모델에서 처리
-4. 운영진이면 정모랑 반짝모임 다 보이고 동아리원이면 반짝모임만 보이게(나중에 하기)
-5. 참가비 최소 0, 숫자로만 입력 (○)
-6. 작성자 닉네임 받아오기 (○)
-7. 모임 인원은 동아리 최대제한 인원 수 이하로 설정하기(○)
 -->
    <div>
       <c:import url="subHeader.jsp"></c:import>
@@ -312,8 +304,6 @@ background-color : lightgray;
          <select class="select" id="typeId" name="typeId">
             <option value="0" selected>모임유형</option>
             
-            <!-- 운영진이면 정모랑 반짝모임 다 보이고 동아리원이면 반짝모임만 보이게 -->
-            
             <option value="1">정모</option>
             <option value="2">반짝모임</option>
             
@@ -326,25 +316,7 @@ background-color : lightgray;
             <textarea cols="50" rows="10" id="content" name="content" required="required"></textarea>
          </div>
    
-             <%-- <div class="photo">
-               <div id="bbs">
-                  <form action="">
-                     <div id='image_preview'>
-                        <h3>사진 올리기</h3>
-                        <input type='file' id='btnAtt' multiple='multiple' />
-                        <div id='att_zone'
-                           data-placeholder='파일을 첨부 하려면 파일 선택 버튼을 클릭하거나 파일을 드래그앤드롭 하세요.'></div>
-                     </div>
-                     <div id="bbsCreated_footer">
-                        <input type="button" value="등록하기" class="btn2" /> <input
-                           type="button" value="취소하기" class="btn2"
-                           onclick="javascript:location.href='<%=cp%>/beePicList.jsp'" />
-                     </div>
-                  </form>
-               </div> 
-   
-            </div> --%>
-         </div>
+      </div>
          
          <div class="bottom2">
             <div class="left">
@@ -359,23 +331,6 @@ background-color : lightgray;
       
             </div>
       
-      
-            <!-- <div class="right">
-               <section class="weather">
-                  <label for="weather"></label>
-                  <div class="weather__box1">
-                     <img class="weather__icon">
-                     <div class="weather__description"></div>
-                  </div>
-                  <div class="weather__box2">
-                     <div class="weather__temperature"></div>
-                     <div class="weather__location"></div>
-                  </div>
-      
-               </section>
-               <section class="map">지도연동</section>
-               
-            </div> -->
          </div>
    
       <div class="enroll">

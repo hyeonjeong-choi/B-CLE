@@ -83,12 +83,6 @@ body {
 /* 생략 */
 </style>
 <body>
-<%-- 
-	<div>
-		<c:import url="nav.jsp"></c:import>
-		<c:import url="meetingmain.jsp"></c:import>
-	</div>
-	 --%>
 	<div class="contents">
 
 

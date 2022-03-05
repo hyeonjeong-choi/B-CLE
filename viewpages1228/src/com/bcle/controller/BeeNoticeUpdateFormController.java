@@ -26,7 +26,7 @@ public class BeeNoticeUpdateFormController implements Controller
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		ModelAndView mav = new ModelAndView();
-HttpSession session = request.getSession();
+		HttpSession session = request.getSession();
 		// 세션 처리 과정 추가 ------------------------------------------
 		/*
 		 * 
