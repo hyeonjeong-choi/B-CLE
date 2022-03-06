@@ -92,18 +92,6 @@ public class AjaxClubCalendarListController implements Controller
 			
 			mav.setViewName("/WEB-INF/view/AjaxCalendarList.jsp");
 
-			
-			
-			
-			
-			
-			
-			
-			//beeList = dao.list(cid);
-
-			//mav.addObject("beeList", beeList);
-
-			//mav.setViewName("/WEB-INF/view/ClubCalendarList.jsp");
 		} catch (Exception e)
 		{
 			System.out.println(e.toString());
