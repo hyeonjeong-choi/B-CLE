@@ -104,15 +104,12 @@ public class BeeDetailPageController implements Controller
 			reqBee = reqBeeDao.reqList(beeId);
 			count = reqBeeDao.count(beeId);
 			
-			//beeEvalList = beeEvalDao.list(dao.searchClubmemId(id, cid), beeId);
 			beeEvalList = beeEvalDao.list(beeId);
 			urlList = beePhotoDao.beePic(beeId);
 			//System.out.println(urlList);
 			
 			reqIdList = memberEvalDao.getReqId(beeId, dao.searchClubmemId(id, cid));
 			
-			//System.out.println(bee.getClubmemId());
-			//System.out.println(dao.searchClubmemId(id, "C1"));
 			mav.addObject("s_clubmemId", dao.searchClubmemId(id, cid));
 			mav.addObject("cid", cid);
 			mav.addObject("bee", bee);
