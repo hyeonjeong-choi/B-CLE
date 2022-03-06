@@ -53,18 +53,6 @@ public class BeeInsertController implements Controller
 		String min = request.getParameter("min");
 		String max = request.getParameter("max");
 		
-		// 세션값으로 아이디를 받아오는데 
-		// 동아리회원목록코드로 변환해주는 메소드를 정의해야 되겠다??
-		// 지금은 걍 회원 번호를 직접 넣을 것임.
-		
-		// 정모 열린 날에는 반짝모임 열지 못하도록 해야 함.
-		// 그러면 자바파일 만들어서 거기서 메소드를 만들던지 아니면
-		// 여기서 검사하게 만들던지 어쨌든 등록 실패하면 
-		// 실패한 페이지가 또 있어야 하는 거야? 홀리몰리...
-		// 그냥 그 제약 다 없애버릴까.......
-		// 그리고 정모가 이미 있는 날에 또 정모를 연다고 하면 이상한 거 아냐???
-		// 아닌가 그냥 두 번 만나고 싶을 수 있잖아 
-		// 오전 오후 그치???
 		String cid = request.getParameter("cid");
 		Object getId = session.getAttribute("id");
 		String id = (String)getId;
@@ -89,13 +77,6 @@ public class BeeInsertController implements Controller
 			//System.out.println("BeeInsertController cid 확인 :" + cid);
 			
 			dao.add(bee);
-			/*
-			 * dao.add(bee)
-			 * 
-			 * beeList = dao.list();
-			 * 
-			 * mav.addObject("beeList", beeList);
-			 */
 			mav.setViewName("redirect:clubmain.action?cid="+cid);
 			
 		} catch (Exception e)

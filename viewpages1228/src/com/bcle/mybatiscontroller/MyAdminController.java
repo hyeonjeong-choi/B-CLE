@@ -59,7 +59,7 @@ public class MyAdminController
 			
 			int dataCount = 0;
 			
-			// 전체 리뷰 갯수 구하기
+			// 전체 갯수 구하기
 			if(select.equals("0"))
 				dataCount = dao.countMember();
 			else
@@ -153,8 +153,6 @@ public class MyAdminController
 			
 			// select(옵션), inputValue(검색 값)
 			String sort = request.getParameter("sort");
-			//System.out.println(select);
-			//System.out.println(inputValue);
 			
 			int dataCount = 0;
 			
