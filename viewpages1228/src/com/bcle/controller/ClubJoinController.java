@@ -21,7 +21,7 @@ public class ClubJoinController implements Controller
 	{
 		this.dao = dao;
 	}
-	
+	//test
 	@Override
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
