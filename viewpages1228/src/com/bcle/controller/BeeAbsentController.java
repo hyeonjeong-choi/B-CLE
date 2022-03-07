@@ -1,7 +1,5 @@
 package com.bcle.controller;
 
-
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -40,14 +38,6 @@ public class BeeAbsentController implements Controller
 		 * 클라이언트는 // 일반 직원으로 로그인 되어 있는 상황이므로 // 로그아웃 액션 처리하여 다시 관리자로 로그인할 수 있도록 처리 }
 		 */
 		// ------------------------------------------ 세션 처리 과정 추가
-		/*
-		 * String clubmemId = request.getParameter("clubmemId"); String beeId =
-		 * request.getParameter("beeId");
-		 * 
-		 * 
-		 * Object getId = session.getAttribute("id"); String id = (String)getId;
-		 * System.out.println(id); System.out.println(clubmemId);
-		 */
 		String beeId = request.getParameter("beeId");
 		String reqId = request.getParameter("reqId");
 		String cid = request.getParameter("cid");
@@ -55,10 +45,6 @@ public class BeeAbsentController implements Controller
 		System.out.println(beeId);
 		try
 		{
-			
-			/*
-			 * reqBee.setClubmemId(clubmemId); reqBee.setBeeId(beeId);
-			 */
 			dao.add(reqId);
 			mav.setViewName("redirect:beedetailpage.action?beeId="+beeId+"&cid="+cid);
 			
